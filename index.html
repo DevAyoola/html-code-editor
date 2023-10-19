@@ -93,6 +93,12 @@
 				border-color: green;
 			}
 
+			@media screen and (max-width: 400px) {
+				label {
+					margin: 5px;
+				}
+			}
+			
 			@media screen and (max-width: 576px) {
 				.code,
 				.result {
@@ -125,7 +131,7 @@
 			<section id="tools">
 				<span>
 					<div id="open">
-						<label for="file">Open .html File</label>
+						<label for="file">OPEN .HTML</label>
 						<input type="file" id="file" onchange="openfile()" size="5" />&nbsp;
 					</div>
 					<span id="cc">
