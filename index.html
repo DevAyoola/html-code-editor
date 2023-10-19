@@ -47,15 +47,19 @@
 
 			#open {
 				padding-bottom: 8px;
+				margin-top: 10px;
 			}
 
-			.label {
-				background-color: black;
+			label {
+				background-color: rgb(30, 30, 30);
 				border-radius: 5px;
 				color: white;
 				font-size: 16px;
 				font-family: monospace;
-				padding: 5px;
+				font-weight: 600;
+				padding: 4px;
+				margin: 0 auto;
+				width: fit-content;
 			}
 
 			button {
@@ -125,9 +129,10 @@
 
 		<section class="main">
 			<section id="tools">
-				<div class="label">OPEN .HTML FILE</div>
 				<div id="open">
-					<input type="file" id="file" onchange="openfile()" size="5" />&nbsp;
+					<label for="file">OPEN</label>
+					<input type="file" id="file" onchange="openfile()" size="5" /><br />
+					<small><i>.html files only</i></small>
 				</div>
 				<span id="cc">
 					<button type="button" onclick="cleartext();" id="clear">Clear</button>
