@@ -48,11 +48,12 @@
 			#open {
 				padding-bottom: 8px;
 			}
-			label {
+
+			.label {
 				background-color: black;
 				border-radius: 5px;
 				color: white;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: monospace;
 				padding: 5px;
 			}
@@ -124,19 +125,15 @@
 
 		<section class="main">
 			<section id="tools">
-				<span>
-					<div id="open">
-						<label for="file">OPEN .HTML FILE</label>
-						<input type="file" id="file" onchange="openfile()" size="5" />&nbsp;
-					</div>
-					<span id="cc">
-						<button type="button" onclick="cleartext();" id="clear">
-							Clear
-						</button>
-						<button type="button" onclick="hide();" id="run">Run</button>
-					</span>
-					<button type="button" onclick="show();" id="goback">View Code</button>
+				<div class="label">OPEN .HTML FILE</div>
+				<div id="open">
+					<input type="file" id="file" onchange="openfile()" size="5" />&nbsp;
+				</div>
+				<span id="cc">
+					<button type="button" onclick="cleartext();" id="clear">Clear</button>
+					<button type="button" onclick="hide();" id="run">Run</button>
 				</span>
+				<button type="button" onclick="show();" id="goback">View Code</button>
 			</section>
 			<section id="display">
 				<div>
