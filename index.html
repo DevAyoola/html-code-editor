@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>HTML Editor</title>
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box !important;
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden !important;
+				background-color: whitesmoke;
+			}
+
+			header {
+				background-color: palevioletred;
+				color: white;
+				font-family: Segoe UI;
+				padding: 2px;
+				text-align: center;
+			}
+
+			.main {
+				font-family: Segoe UI;
+				padding: 5px;
+			}
+
+			#tools,
+			#goback,
+			#display,
+			.code,
+			.result {
+				text-align: center;
+				margin: 0 auto;
+			}
+
+			#tools {
+				font-size: 16px;
+				margin: 15px 0 7px 0;
+			}
+
+			#open {
+				padding-bottom: 8px;
+			}
+			label {
+				background-color: black;
+				border-radius: 5px;
+				color: white;
+				font-family: monospace;
+				padding: 5px;
+			}
+
+			button {
+				background-color: #8e30e7;
+				border: none;
+				border-radius: 7px;
+				color: white;
+				font-weight: bold;
+				margin: 5px;
+				padding: 8px;
+				text-transform: uppercase;
+			}
+
+			button:hover {
+				background-color: #7120bd;
+			}
+
+			.code,
+			.result {
+				background-color: white;
+				border-width: 4px;
+				height: 69vh;
+			}
+
+			.code {
+				border-color: blueviolet;
+				border-style: solid;
+				font-family: monospace;
+				font-size: 18px;
+				font-weight: 500;
+				padding: 1%;
+				padding-top: 8px;
+				text-align: left;
+			}
+
+			.result {
+				border-color: green;
+			}
+
+			@media screen and (max-width: 576px) {
+				.code,
+				.result {
+					width: 95%;
+				}
+			}
+
+			@media screen and (min-width: 577px) and (max-width: 991px) {
+				.code,
+				.result {
+					width: 80%;
+				}
+			}
+
+			@media screen and (min-width: 992px) {
+				.code,
+				.result {
+					width: 55%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>HTML Editor</h1>
+		</header>
+
+		<section class="main">
+			<section id="tools">
+				<span>
+					<div id="open">
+						<label for="file">Open .html File</label>
+						<input type="file" id="file" onchange="openfile()" size="5" />&nbsp;
+					</div>
+					<span id="cc">
+						<button type="button" onclick="cleartext();" id="clear">
+							Clear
+						</button>
+						<button type="button" onclick="hide();" id="run">Run</button>
+					</span>
+					<button type="button" onclick="show();" id="goback">View Code</button>
+				</span>
+			</section>
+			<section id="display">
+				<div>
+					<textarea class="code"></textarea>
+				</div>
+				<div>
+					<iframe class="result"></iframe>
+				</div>
+			</section>
+			<br />
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
